@@ -1,7 +1,7 @@
 local lib = require "goto-preview.lib"
 
 local function get_offset_encoding()
-  local client = vim.lsp.get_clients({ bufnr = 0 })[1]
+  local client = vim.lsp.get_active_clients({ bufnr = 0 })[1]
   return client and client.offset_encoding or 'utf-16'
 end
 
